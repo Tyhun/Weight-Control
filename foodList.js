@@ -35,10 +35,10 @@ function showOutput() {
 }
 
 function sumCalorie(list) {
-  let sum = 0;
+  var sum = null;
   list.forEach(function(element) {
     sum = sum + parseInt(element.calorie);
   });
-
+  progressBar.update(sum);
   document.getElementById("totalCal").innerHTML = sum;
 }
